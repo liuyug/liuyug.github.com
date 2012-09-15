@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Yugang' log</title><link href="http://liuyug.github.com/" rel="alternate"></link><link href="http://liuyug.github.com/feeds/high.atom.xml" rel="self"></link><id>http://liuyug.github.com/</id><updated>2012-09-04T10:00:00+08:00</updated><entry><title>read</title><link href="http://liuyug.github.com/read.html" rel="alternate"></link><updated>2012-09-04T10:00:00+08:00</updated><author><name>aa</name></author><id>tag:liuyug.github.com,2012-09-04:read.html</id><summary type="html">&lt;ol class="arabic simple"&gt;
+&lt;li&gt;11&lt;/li&gt;
+&lt;li&gt;22&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;hello world!&lt;/p&gt;
+</summary><category term="aa"></category><category term="bb"></category></entry></feed>
