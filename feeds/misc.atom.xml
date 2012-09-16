@@ -1,17 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Yugang' log</title><link href="http://liuyug.github.com/" rel="alternate"></link><link href="http://liuyug.github.com/feeds/misc.atom.xml" rel="self"></link><id>http://liuyug.github.com/</id><updated>2012-09-15T11:57:34+08:00</updated><entry><title>My first title</title><link href="http://liuyug.github.com/my-first-title.html" rel="alternate"></link><updated>2012-09-15T11:57:34+08:00</updated><author><name>Yugang LIU</name></author><id>tag:liuyug.github.com,2012-09-15:my-first-title.html</id><summary type="html">&lt;p&gt;my article&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;1&lt;/li&gt;
-&lt;li&gt;2&lt;/li&gt;
-&lt;/ul&gt;
-</summary></entry><entry><title>read2</title><link href="http://liuyug.github.com/read2.html" rel="alternate"></link><updated>2012-09-15T11:57:34+08:00</updated><author><name>Yugang LIU</name></author><id>tag:liuyug.github.com,2012-09-15:read2.html</id><summary type="html">&lt;ol class="arabic simple"&gt;
-&lt;li&gt;11&lt;/li&gt;
-&lt;li&gt;22&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;hello world!&lt;/p&gt;
-&lt;p&gt;opqrstuvwxyz
-abcdefghijklmnopqrstuvwxyz
-zz
-1212345678901234567778889990&lt;/p&gt;
-&lt;p&gt;hello&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Yugang' log</title><link href="http://liuyug.github.com/" rel="alternate"></link><link href="http://liuyug.github.com/feeds/misc.atom.xml" rel="self"></link><id>http://liuyug.github.com/</id><updated>2012-09-16T10:00:00+08:00</updated><entry><title>Hello World</title><link href="http://liuyug.github.com/hello-world.html" rel="alternate"></link><updated>2012-09-16T10:00:00+08:00</updated><author><name>Yugang LIU</name></author><id>tag:liuyug.github.com,2012-09-16:hello-world.html</id><summary type="html">&lt;p&gt;Hello World!
+我的第一个Blog信息！&lt;/p&gt;
 </summary></entry></feed>
