@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Yugang' blog</title><link href="http://liuyug.github.com/" rel="alternate"></link><link href="http://liuyug.github.com/feeds/content.atom.xml" rel="self"></link><id>http://liuyug.github.com/</id><updated>2012-09-25T00:00:00+08:00</updated><entry><title>Hello World</title><link href="http://liuyug.github.com/hello-world.html" rel="alternate"></link><updated>2012-09-25T00:00:00+08:00</updated><author><name>Yugang LIU</name></author><id>tag:liuyug.github.com,2012-09-25:hello-world.html</id><summary type="html">&lt;p&gt;Hello World!&lt;/p&gt;
-</summary></entry></feed>
