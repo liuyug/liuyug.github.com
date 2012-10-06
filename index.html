@@ -62,8 +62,8 @@
 
     <div class='article'>
         <div class="content-title">
-            <a href="./posts/nin-ying-dang-bi-mian-de-12-ge-html-biao-qian-cuo-wu.html"><h1>您应当避免的 12 个 HTML 标签错误</h1></a>
-            2012年10月03日
+            <a href="./firefox-shi-yong.html"><h1>firefox 使用</h1></a>
+            2012年10月06日
 
 
 by <a class="url fn" href="./author/yugang-liu.html">Yugang LIU</a>
@@ -74,133 +74,34 @@ by <a class="url fn" href="./author/yugang-liu.html">Yugang LIU</a>
  
         </div>
         
-        <div><!-- -*- coding: utf-8 -*- -->
-<p>From: <a class="reference external" href="http://smashinghub.com/12-evil-html-tag-mistakes-you-really-should-avoid.htm">12 Evil HTML Tag Mistakes You Really Should Avoid</a>.</p>
-<p>在 WEB 页面访问中，人们经常遇到 HTML 代码编写错误，开发者应当真正的认真考虑并小心使用 HTML 标签。下面讨论了 12 个常见的易忽略的错误，这些提示将会有助于 HTML 开发者。</p>
-<div class="section" id="id1">
-<h2>1. HTML 标签嵌套错误</h2>
-<div class="figure">
-<img alt="images/highlighting_tag_tree1.png" src="static/images/highlighting_tag_tree1.png" />
-</div>
-<p>关闭 HTML 标签十分重要。标签的开启与关闭要一一对应，而且顺序相反。新手往往不在意标签的关闭。校验 HTML 代码时会发现错误，并且 Style 样式也不能正确提交。一定要小心这个错误。</p>
-<p>错误用法:</p>
+        <div><div class="section" id="google">
+<h2>google 搜索插件</h2>
+<p>默认 google 搜索插件会自动判断 <tt class="docutils literal">locale</tt> ，即您所在的区域，如果您处于中国大陆地区，自动跳转到 google 香港， <tt class="docutils literal">www.google.com.hk</tt> 。通过强制设定所在区域，即可避免跳转。</p>
+<p>firefox 搜索插件位于目录 <tt class="docutils literal">/usr/lib64/firefox/searchplugins</tt></p>
 <pre class="literal-block">
-&lt;div&gt;&lt;p&gt;&lt;a&gt;This is my Smashing text&lt;/p&gt;&lt;/div&gt;&lt;/a&gt;
+amazondotcom.xml
+bing.xml
+eBay.xml
+google.xml
+twitter.xml
+wikipedia.xml
+yahoo.xml
 </pre>
-<p>正确用法:</p>
+<p>编辑 google.xml，加入 <tt class="docutils literal">hl=zh_CN</tt>:</p>
 <pre class="literal-block">
-&lt;div&gt;&lt;p&gt;&lt;a&gt;This is my Smashing text&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;Url type=&quot;text/html&quot; method=&quot;GET&quot; template=&quot;http://www.google.com/search&quot;&gt;
+  &lt;Param name=&quot;q&quot; value=&quot;{searchTerms}&quot;/&gt;
+  &lt;Param name=&quot;ie&quot; value=&quot;utf-8&quot;/&gt;
+  &lt;Param name=&quot;oe&quot; value=&quot;utf-8&quot;/&gt;
+  &lt;Param name=&quot;aq&quot; value=&quot;t&quot;/&gt;
+  &lt;!-- configure locale manually --&gt;
+  &lt;Param name=&quot;hl&quot; value=&quot;zh_CN&quot;/&gt;
+  &lt;!-- Dynamic parameters --&gt;
+  &lt;Param name=&quot;rls&quot; value=&quot;{moz:distributionID}:{moz:locale}:{moz:official}&quot;/&gt;
+  &lt;MozParam name=&quot;client&quot; condition=&quot;defaultEngine&quot; trueValue=&quot;firefox-a&quot; falseValue=&quot;firefox&quot;/&gt;
+&lt;/Url&gt;
 </pre>
-</div>
-<div class="section" id="list">
-<h2>2. 不正确的使用 List</h2>
-<div class="figure">
-<img alt="images/HTML_Lists1.png" src="static/images/HTML_Lists1.png" />
-</div>
-<p>OL 和 UL 标签总是被用于显示多个项目，并以不同的方式使用。List 标签在显示大量信息时特别有用，它能避免使用大量的换行符( &lt;br /&gt; )，搜索引擎也能识别 List 标签，使用标准的 HTML 标签会比 &lt;br /&gt; 做得更好。</p>
-</div>
-<div class="section" id="form">
-<h2>3. 不正确的使用 Form 标签</h2>
-<p>form 和 table 标签常常使人迷惑。是应当先用 table，还是先用 form，请看下面:</p>
-<p>错误用法:</p>
-<pre class="literal-block">
-&lt;table&gt;&lt;form&gt;&lt;tr&gt;&lt;td&gt;..... &lt;/td&gt;&lt;/tr&gt;&lt;/form&gt;&lt;/table&gt;
-</pre>
-<p>正确用法:</p>
-<pre class="literal-block">
-&lt;form&gt;&lt;table&gt;&lt;tr&gt;.... &lt;/tr&gt;&lt;/table&gt;&lt;/form&gt;
-</pre>
-</div>
-<div class="section" id="inline-block">
-<h2>4. 在 inline 元素中使用 block 元素</h2>
-<div class="figure">
-<img alt="images/inline-block.gif" src="static/images/inline-block.gif" />
-</div>
-<p>HTML 开发者都知道元素总是以 inline 或 block 的方式显示，每一个元素缺省被创建在 inline 或 block 元素内。在文档中，首先是 block 元素，如 &lt;p&gt; 和 &lt;div&gt; 等，inline 元素则在 block 元素内。整个文档由若干个这种结构体组成。因此，要确保 inline 元素放在 block 元素内，而不是其他地方。</p>
-<p>block 元素:</p>
-<pre class="literal-block">
-&lt;div&gt;, &lt;h1&gt;…&lt;h6&gt;, &lt;p&gt;, &lt;ul&gt;, &lt;ol&gt;, &lt;dl&gt;, &lt;table&gt;, &lt;blockquote&gt;, &lt;form&gt;
-</pre>
-<p>inline 元素:</p>
-<pre class="literal-block">
-&lt;span&gt;, &lt;a&gt;, &lt;strong&gt;, &lt;em&gt;, &lt;img /&gt;, &lt;abbr&gt;, &lt;acronym&gt;
-</pre>
-</div>
-<div class="section" id="alt">
-<h2>5. 缺少 alt 属性</h2>
-<p>当使用图像并显示在主页时，一定要使用 alt 属性。这是非常必要的，用户可以决定是否显示图像，特别是在一个慢速连接或小屏幕时。这个属性能描述所显示的图像。不要使用 <tt class="docutils literal"><span class="pre">alt=&quot;image&quot;</span></tt> 或 <tt class="docutils literal"><span class="pre">alt=&quot;&quot;</span></tt> ，这没有任何益处。</p>
-<p>错误用法:</p>
-<pre class="literal-block">
-&lt;img src=&quot;smiley.gif&quot; alt=&quot;&quot; /&gt;
-</pre>
-<p>正确用法:</p>
-<pre class="literal-block">
-&lt;img src=&quot;smiley.gif&quot; alt=&quot;Smiley face&quot; width=&quot;42&quot; height=&quot;42&quot; /&gt;
-</pre>
-</div>
-<div class="section" id="id2">
-<h2>6. 粗体和斜体的使用方法错误</h2>
-<p>一般 <tt class="docutils literal">&lt;b&gt;</tt> 用于粗体， <tt class="docutils literal">&lt;i&gt;</tt> 用于斜体，但这两种表示方法只是计算机语法，用 CSS 样式来表达会更好一些。如果文本必须使用粗体或斜体，那么使用 <tt class="docutils literal">&lt;strong&gt;</tt> 和 <tt class="docutils literal">&lt;em&gt;</tt> ，他们与 <tt class="docutils literal">&lt;b&gt;</tt> 和 <tt class="docutils literal">&lt;i&gt;</tt> 的功能一样，但看上去更好。</p>
-</div>
-<div class="section" id="id3">
-<h2>7. 不必要的换行</h2>
-<p>在一段中，使用标签 <tt class="docutils literal">&lt;br /&gt;</tt> 来换行。但是许多人在两个元素间加入换行，这是不对的。只有在必要时，才用 <tt class="docutils literal">&lt;br /&gt;</tt> 切换到下一行。</p>
-<p>错误用法:</p>
-<pre class="literal-block">
-This is my first paragraph
-&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-
-This will be my test description
-</pre>
-<p>正确用法:</p>
-<pre class="literal-block">
-&lt;p&gt;This is my first paragraph&lt;/p&gt;
-&lt;p&gt;This will be my test description&lt;/p&gt;
-</pre>
-</div>
-<div class="section" id="id4">
-<h2>8. 不正确的使用删除线</h2>
-<div class="figure">
-<img alt="images/strikethrough1.jpg" src="static/images/strikethrough1.jpg" />
-</div>
-<p><tt class="docutils literal">&lt;strike&gt;</tt> 和 <tt class="docutils literal">&lt;s&gt;</tt> 曾用于修正 WEB 中的文本，但是现在，他们已经废除了。新的标签是 <tt class="docutils literal">&lt;ins&gt;</tt> 和 <tt class="docutils literal">&lt;del&gt;</tt> 。他们用于 WEB 页和文档中的插入和删除。</p>
-</div>
-<div class="section" id="html-css">
-<h2>9. 在 HTML 代码中使用 CSS 样式</h2>
-<p>你应当听说过许多次，在 HTML 代码中使用 CSS 样式不是个好注意，你知道为什么吗？这是因为 CSS 样式和 HTML 代码是完全分离的，他们共同组成结构化文档。在 HTML 代码中直接使用样式是不正确的。这就是为什么总是建议在样式表中表达样式。</p>
-<p>错误用法:</p>
-<pre class="literal-block">
-&lt;p style=&quot;font-size: 14px;font-weight: bol&quot;&gt;
-</pre>
-</div>
-<div class="section" id="id5">
-<h2>10. 包含和去除边框</h2>
-<p>边框属性是一个表示效果，因此它只应当被 CSS 样式修改。不要担心默认的边框样式。</p>
-<p>错误用法:</p>
-<pre class="literal-block">
-&lt;img src=&quot;smiley.gif&quot; alt=&quot;&quot; border=&quot;0&quot; /&gt;
-</pre>
-</div>
-<div class="section" id="h1-h6">
-<h2>11. 忽略 &lt;h1&gt;..&lt;h6&gt; 标签</h2>
-<p><tt class="docutils literal"><span class="pre">&lt;h1&gt;..&lt;h6&gt;</span></tt> 标签用于文档识别，它创建一个区段。有时 <tt class="docutils literal">&lt;h&gt;</tt> 标签会出现在文档右侧，这依靠于您的文档的组织方式。如果能按顺序使用则更好。</p>
-<p>错误用法:</p>
-<pre class="literal-block">
-&lt;strong&gt;This is my Smashing Heading&lt;/strong&gt;&lt;p&gt;This is my xyz description.&lt;/p&gt;
-</pre>
-<p>正确用法:</p>
-<pre class="literal-block">
-&lt;h1&gt;This is my Smashing Heading&lt;/h1&gt;&lt;p&gt;This is my xyz description.&lt;/p&gt;
-</pre>
-</div>
-<div class="section" id="marquee-blink">
-<h2>12. 糟糕的 &lt;marquee&gt; 和 &lt;blink&gt;</h2>
-<div class="figure">
-<img alt="images/Look-at-Me1.jpg" src="static/images/Look-at-Me1.jpg" />
-</div>
-<p>可以说， <tt class="docutils literal">&lt;marquee&gt;</tt> 和 <tt class="docutils literal">&lt;blink&gt;</tt> 是另外一种让 WEB 页面丑陋的方式。假如你想让一些内容引起他人的注意，您应当使用其他方式，决不要用文本闪烁和移动，这是真正让人讨厌的方式。</p>
+<p>重新开启 firefox 尝试。</p>
 </div>
 </div>
         <hr />
@@ -217,7 +118,41 @@ This will be my test description
  
 
     <div class='article'>
-        <a href="./posts/hello-world.html"><h2>Hello World</h2></a>
+        <a href="./nin-ying-dang-bi-mian-de-12-ge-html-biao-qian-cuo-wu.html"><h2>您应当避免的 12 个 HTML 标签错误</h2></a>
+        <div class= "well small"> 2012年10月03日
+
+
+by <a class="url fn" href="./author/yugang-liu.html">Yugang LIU</a>
+ 
+
+
+
+ </div>
+        <div class="summary"><!-- -*- coding: utf-8 -*- -->
+<p>From: <a class="reference external" href="http://smashinghub.com/12-evil-html-tag-mistakes-you-really-should-avoid.htm">12 Evil HTML Tag Mistakes You Really Should Avoid</a>.</p>
+<p>在 WEB 页面访问中，人们经常遇到 HTML 代码编写错误，开发者应当真正的认真考虑并小心使用 HTML 标签。下面讨论了 12 个常见的易忽略的错误，这些提示将会有助于 HTML 开发者。</p>
+<div class="section" id="id1">
+<h2>1. HTML 标签嵌套错误</h2>
+<div class="figure">
+<img alt="images/highlighting_tag_tree1.png" src="static/images/highlighting_tag_tree1.png" />
+</div>
+<p>关闭 HTML 标签十分重要。标签的开启与关闭要一一对应，而且顺序相反。新手往往不在意标签的关闭。校验 HTML 代码时会发现错误，并且 Style 样式也不能正确提交。一定要小心这个错误。</p>
+<p>错误用法:</p>
+<pre class="literal-block">
+&lt;div&gt;&lt;p&gt;&lt;a&gt;This is my Smashing text ...</pre></div></!--> <a class="btn btn-info xsmall" href="./nin-ying-dang-bi-mian-de-12-ge-html-biao-qian-cuo-wu.html">read more</a></div>
+    </div>	
+				
+    
+
+ 
+
+        
+
+
+ 
+
+    <div class='article'>
+        <a href="./hello-world.html"><h2>Hello World</h2></a>
         <div class= "well small"> 2012年09月25日
 
 
@@ -228,7 +163,7 @@ by <a class="url fn" href="./author/yugang-liu.html">Yugang LIU</a>
 
  </div>
         <div class="summary"><p>Hello World!</p>
- <a class="btn btn-info xsmall" href="./posts/hello-world.html">read more</a></div>
+ <a class="btn btn-info xsmall" href="./hello-world.html">read more</a></div>
     </div>	
 				
     
@@ -284,9 +219,9 @@ by <a class="url fn" href="./author/yugang-liu.html">Yugang LIU</a>
                 </li>
                 
                 
-                <li><a href="./category/misc.html">misc</a></li>
-                
                 <li><a href="./category/web.html">WEB</a></li>
+                
+                <li><a href="./category/misc.html">Misc</a></li>
                                    
             </ul>
             </div>

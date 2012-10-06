@@ -62,8 +62,8 @@
 
     <div class='article'>
         <div class="content-title">
-            <a href=".././firefox-shi-yong.html"><h1>firefox 使用</h1></a>
-            2012年10月06日
+            <a href=".././hello-world.html"><h1>Hello World</h1></a>
+            2012年09月25日
 
 
 by <a class="url fn" href=".././author/yugang-liu.html">Yugang LIU</a>
@@ -74,74 +74,11 @@ by <a class="url fn" href=".././author/yugang-liu.html">Yugang LIU</a>
  
         </div>
         
-        <div><div class="section" id="google">
-<h2>google 搜索插件</h2>
-<p>默认 google 搜索插件会自动判断 <tt class="docutils literal">locale</tt> ，即您所在的区域，如果您处于中国大陆地区，自动跳转到 google 香港， <tt class="docutils literal">www.google.com.hk</tt> 。通过强制设定所在区域，即可避免跳转。</p>
-<p>firefox 搜索插件位于目录 <tt class="docutils literal">/usr/lib64/firefox/searchplugins</tt></p>
-<pre class="literal-block">
-amazondotcom.xml
-bing.xml
-eBay.xml
-google.xml
-twitter.xml
-wikipedia.xml
-yahoo.xml
-</pre>
-<p>编辑 google.xml，加入 <tt class="docutils literal">hl=zh_CN</tt>:</p>
-<pre class="literal-block">
-&lt;Url type=&quot;text/html&quot; method=&quot;GET&quot; template=&quot;http://www.google.com/search&quot;&gt;
-  &lt;Param name=&quot;q&quot; value=&quot;{searchTerms}&quot;/&gt;
-  &lt;Param name=&quot;ie&quot; value=&quot;utf-8&quot;/&gt;
-  &lt;Param name=&quot;oe&quot; value=&quot;utf-8&quot;/&gt;
-  &lt;Param name=&quot;aq&quot; value=&quot;t&quot;/&gt;
-  &lt;!-- configure locale manually --&gt;
-  &lt;Param name=&quot;hl&quot; value=&quot;zh_CN&quot;/&gt;
-  &lt;!-- Dynamic parameters --&gt;
-  &lt;Param name=&quot;rls&quot; value=&quot;{moz:distributionID}:{moz:locale}:{moz:official}&quot;/&gt;
-  &lt;MozParam name=&quot;client&quot; condition=&quot;defaultEngine&quot; trueValue=&quot;firefox-a&quot; falseValue=&quot;firefox&quot;/&gt;
-&lt;/Url&gt;
-</pre>
-<p>重新开启 firefox 尝试。</p>
-</div>
+        <div><p>Hello World!</p>
 </div>
         <hr />
     </div>
 		
-    
-
-
- 
-
-        
-
-
- 
-
-    <div class='article'>
-        <a href=".././nin-ying-dang-bi-mian-de-12-ge-html-biao-qian-cuo-wu.html"><h2>您应当避免的 12 个 HTML 标签错误</h2></a>
-        <div class= "well small"> 2012年10月03日
-
-
-by <a class="url fn" href=".././author/yugang-liu.html">Yugang LIU</a>
- 
-
-
-
- </div>
-        <div class="summary"><!-- -*- coding: utf-8 -*- -->
-<p>From: <a class="reference external" href="http://smashinghub.com/12-evil-html-tag-mistakes-you-really-should-avoid.htm">12 Evil HTML Tag Mistakes You Really Should Avoid</a>.</p>
-<p>在 WEB 页面访问中，人们经常遇到 HTML 代码编写错误，开发者应当真正的认真考虑并小心使用 HTML 标签。下面讨论了 12 个常见的易忽略的错误，这些提示将会有助于 HTML 开发者。</p>
-<div class="section" id="id1">
-<h2>1. HTML 标签嵌套错误</h2>
-<div class="figure">
-<img alt="images/highlighting_tag_tree1.png" src="../static/images/highlighting_tag_tree1.png" />
-</div>
-<p>关闭 HTML 标签十分重要。标签的开启与关闭要一一对应，而且顺序相反。新手往往不在意标签的关闭。校验 HTML 代码时会发现错误，并且 Style 样式也不能正确提交。一定要小心这个错误。</p>
-<p>错误用法:</p>
-<pre class="literal-block">
-&lt;div&gt;&lt;p&gt;&lt;a&gt;This is my Smashing text ...</pre></div></!--> <a class="btn btn-info xsmall" href=".././nin-ying-dang-bi-mian-de-12-ge-html-biao-qian-cuo-wu.html">read more</a></div>
-    </div>	
-				
     
         <div class="pagination">
 <ul>
@@ -150,7 +87,7 @@ by <a class="url fn" href=".././author/yugang-liu.html">Yugang LIU</a>
 
 
 
-    <li class="active"><a href=".././category/WEB.html">1</a></li>
+    <li class="active"><a href=".././tag/test.html">1</a></li>
 
 
 
@@ -160,6 +97,7 @@ by <a class="url fn" href=".././author/yugang-liu.html">Yugang LIU</a>
 </ul>
 </div>
     
+
 
  
 
