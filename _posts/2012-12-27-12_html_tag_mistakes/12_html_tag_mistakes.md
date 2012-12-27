@@ -17,6 +17,8 @@ From: `12 Evil HTML Tag Mistakes You Really Should Avoid <http://smashinghub.com
 --------------------
 .. image:: images/highlighting_tag_tree1.png 
 
+![alt text](images/highlighting_tag_tree1.png)
+
 关闭 HTML 标签十分重要。标签的开启与关闭要一一对应，而且顺序相反。新手往往不在意标签的关闭。校验 HTML 代码时会发现错误，并且 Style 样式也不能正确提交。一定要小心这个错误。
 
 错误用法::
